@@ -13,11 +13,20 @@ if (fs.existsSync("./days/" + dayNumber + "/index.ts")) {
 }
 
 fs.mkdirSync("./days/" + dayNumber);
-fs.writeFileSync("./days/" + dayNumber + "/index.ts", `import { inputFile } from "../../util";
+
+fs.writeFileSync("./days/" + dayNumber + "/1.ts", `import { inputFile } from "../../util";
 
 export default async function() {
     const input = inputFile(${dayNumber});
 
-    console.log("Day ${dayNumber}");
+    console.log("Day ${dayNumber} Part 1");
 }`);
+fs.writeFileSync("./days/" + dayNumber + "/2.ts", `import { inputFile } from "../../util";
+
+export default async function() {
+    const input = inputFile(${dayNumber});
+
+    console.log("Day ${dayNumber} Part 2");
+}`);
+
 fs.writeFileSync("./days/" + dayNumber + "/input.txt", "");
