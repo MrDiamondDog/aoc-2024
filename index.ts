@@ -10,6 +10,7 @@ if (!day) {
     const module = await import(`./days/${day}/${part}.ts`);
 
     if (module.default) {
+        console.log(`Day ${day} Part ${part}`);
         console.log(await module.default());
     } else {
         console.error("No default export found in day " + day);
