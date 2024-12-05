@@ -16,8 +16,6 @@ export default async function() {
         if (match[1] !== "mul") continue;
         if (!enabled) continue;
 
-        console.log(match[1], match[3], match[4], parseInt(match[3]) * parseInt(match[4]), sum)
-
         sum += parseInt(match[3]) * parseInt(match[4]);
     }
 
